@@ -16,9 +16,14 @@ The page show important things.
 	Public IP: 54.152.38.77 
 	Username: ubuntu
 
-At the bottom on the left click on Account Page to download the default private key. 
+At the bottom on the left click on Account Page link to download the default private key.
 
-Once on
+* On the page, click on Download![alt text][ssh-key-pairs].
+
+
+
+
+
 
 
 
@@ -33,3 +38,4 @@ Once on
 [Amazon Console]:https://aws.amazon.com/console/
 [logo]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/aws-services.png
 [logo-connect-ssh]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/connect-ssh.png
+[ssh-key-pairs]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/ssh-key-pairs.png
