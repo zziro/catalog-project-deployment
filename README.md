@@ -141,15 +141,20 @@ At the bottom on the left click on Account Page link to download the default pri
 		sudo a2dissite 000-default.conf
 		sudo service apache2 reload
 
-* Configure Oauth login
+* Configuration in application.py
+
 	* Change directory to : cd /var/www/catalog/catalog/vagrant/catalog/
-	* open the application.py file: sudo vim application.py
+	* Open the application.py file: sudo vim application.py
 	* Update the CLIENT_ID and CLIENT_SECRET lines to: 
+
 		CLIENT_ID = json.loads(
     	open('/var/www/catalog/catalog/vagrant/catalog/client_secrets.json', 'r').read())['web']['client_id']
 
 		CLIENT_SECRET = json.loads(
     	open('/var/www/catalog/catalog/vagrant/catalog/client_secrets.json', 'r').read())['web']['client_secret']
+    
+    * Configure the engine connection:
+    engine = create_engine('postgres://catalog:[PASSWORD]@localhost/catalog')
 
     * At the end of the file change the IP '0.0.0.0' to the Amazon Public IP Address and port 80.
     app.run(host='54.152.38.77', port=80)
