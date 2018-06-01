@@ -29,7 +29,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Change permissions: sudo chmod 600 private_key.pem <br />
 	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />
 
-* Createting new User
+* Creating new User
 	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will be allow to make changes in the server with user root).
 	* Create new User: sudo adduser grader
 	* Create new file: sudo vim /etc/sudoers.d/grader
@@ -58,29 +58,118 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Write 'exit' to go out 'logout'.
 	* Testing the connectio as grader: ssh -i ~/.ssh]/private_key.rsa grader@54.152.38.77
 
+* Configure firewall
+ 	* sudo ufw allow 2200/tcp
+ 	* sudo ufw allow 80/tcp
+ 	* sudo ufw allow 123/udp
+ 	* sudo ufw enable
 
 
+## Application's deployment
 
+	Once the server have configured. Is time to deploy the application.
 
+* Install dependencies:
+    * sudo apt-get update
+    * sudo apt-get upgrade
+	* sudo apt-get install apache2
+	* sudo apt-get install libapache2-mod-wsgi python-dev
+	* sudo apt-get install git
+	* sudo apt-get install python-pip python-flask python-sqlalchemy 		python-psycopg2
+	* sudo apt-get install libpq-dev python-dev
+	* sudo apt-get install postgresql postgresql-contrib
+	* sudo pip install oauth2client requests httplib2
+	* sudo apt-get install postgresql
+	* pip install --upgrade pip
+	* pip install werkzeug==0.8.3
+	* pip install flask==0.10
+	* pip install Flask-Login==0.1.3
+	* pip install oauth2client
+	* pip install requests
+	* pip install httplib2
 
+* Clone the application
+	* Change directory to www file: cd /var/www
+	* Create a directory: mdir catalog
+	* Change direcory to catalog folder: cd catalog
+	* Clone the catalog project: git clone https://github.com/zziro/fullstack-nanodegree-vm.git catalog
 
+* Create a WSGI file
+	* Change directory to aplication's path: cd /var/www/catalog/catalog/vagrant/catalog 
+	* sudo vim catalog.wsgi
+	* Inside the file write the following:
 
+		import sys
+		import logging
 
+		logging.basicConfig(stream=sys.stderr)
+		sys.path.insert(0, '/var/www/catalog/catalog/vagrant/catalog')
 
+		from application import app as application
+		application.secret_key='CLIENT_SECRET'
 
+	Note: application name should match with the application python file.
 
+* Configure virtualhost
+	* Change directory to : cd /etc/apache2/sites-available/catalog.conf
 
+	<VirtualHost *:80>
+     ServerName  54.152.38.77
+     ServerAdmin grader@54.152.38.77
+     #Location of the catalog WSGI file
+     WSGIScriptAlias / /var/www/catalog/catalog/vagrant/catalog/catalog.wsgi
+     #Allow Apache to serve the WSGI app from our catalog directory
+     <Directory /var/www/catalog/catalog/vagrant/catalog>
+          Order allow,deny
+          Allow from all
+     </Directory>
+     #Allow Apache to deploy static content
+     <Directory /var/www/catalog/catalog/vagrant/catalog/static>
+        Order allow,deny
+        Allow from all
+     </Directory>
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      LogLevel warn
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
 
+	* Enable our website
+		sudo a2ensite catalog.conf
+		sudo service apache2 reload
+	* Disable the default website
+		sudo a2dissite 000-default.conf
+		sudo service apache2 reload
 
+* Configure Oauth login
+	* Change directory to : cd /var/www/catalog/catalog/vagrant/catalog/
+	* open the application.py file: sudo vim application.py
+	* Update the CLIENT_ID and CLIENT_SECRET lines to: 
+		CLIENT_ID = json.loads(
+    	open('/var/www/catalog/catalog/vagrant/catalog/client_secrets.json', 'r').read())['web']['client_id']
 
+		CLIENT_SECRET = json.loads(
+    	open('/var/www/catalog/catalog/vagrant/catalog/client_secrets.json', 'r').read())['web']['client_secret']
 
-	
+    * At the end of the file change the IP '0.0.0.0' to the Amazon Public IP Address and port 80.
+    app.run(host='54.152.38.77', port=80)
 
+* Configure database
+	* Login with default user postgres : sudo -u postgres psql postgres
+	* CREATE USER catalog WITH PASSWORD 'PASSWORD';
+	* ALTER USER catalog CREATEDB;
+	* CREATE DATABASE catalog WITH OWNER catalog;
+	* Connecting to the catalog database: $\c catalog
+	* REVOKE ALL ON SCHEMA public FROM public;
+	* GRANT ALL ON SCHEMA public TO catalog;
+	* Quit of the database: $\q
 
+* Confite the database_setup.py file
+	* sudo vim /var/www/catalog/catalog/vagrant/catalog/database_setup.py
+	* Change the engine connection:
+	  engine = create_engine('postgres://catalog:[PASSWORD]@localhost/catalog')
+	* Run database_setup.py: python database_setup.py
+	* Restarting the apache server: sudo service apache2 restart
 
-
-
-## Deployment
 
 
 
