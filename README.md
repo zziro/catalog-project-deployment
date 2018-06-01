@@ -114,25 +114,7 @@ At the bottom on the left click on Account Page link to download the default pri
 * Configure virtualhost
 	* Change directory to : cd /etc/apache2/sites-available/catalog.conf
 
-	<VirtualHost *:80>
-     ServerName  54.152.38.77
-     ServerAdmin grader@54.152.38.77
-     #Location of the catalog WSGI file
-     WSGIScriptAlias / /var/www/catalog/catalog/vagrant/catalog/catalog.wsgi
-     #Allow Apache to serve the WSGI app from our catalog directory
-     <Directory /var/www/catalog/catalog/vagrant/catalog>
-          Order allow,deny
-          Allow from all
-     </Directory>
-     #Allow Apache to deploy static content
-     <Directory /var/www/catalog/catalog/vagrant/catalog/static>
-        Order allow,deny
-        Allow from all
-     </Directory>
-      ErrorLog ${APACHE_LOG_DIR}/error.log
-      LogLevel warn
-      CustomLog ${APACHE_LOG_DIR}/access.log combined
-	</VirtualHost>
+	![alt text][config-virtualhost]
 
 	* Enable our website
 		sudo a2ensite catalog.conf
@@ -183,3 +165,4 @@ At the bottom on the left click on Account Page link to download the default pri
 [ssh-connect-ubuntu]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/test-connect-ubuntu.png
 [54.152.38.77]:http://54.152.38.77/
 [client-secret-config]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/client-secret-config.png
+[config-virtualhost]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/config-virtualhost.png
