@@ -16,13 +16,26 @@ The page show important things.
 	Public IP: 54.152.38.77 <br />
 	Username: ubuntu <br />
 
-At the bottom on the left click on Account Page link to download the default private key.
+At the bottom on the left click on Account Page link to download the default private key. Normally, it takes place at Downloads folder.
 
 * On the page, click on Download![alt text][ssh-key-pairs].
 
-* Click on Networking tab -> Firewall, and two custom ports ![alt text][custom-firewall]:
+* Click on Networking tab -> Firewall, and two custom ports: 123 and 2200. ![alt text][custom-firewall]:
+
+* From terminal to the Downloads folfer:
+	Rename file: sudo mv LightsailDefaultPrivateKey-us-east-1.pem private_key.pem <br />
+	Move .pem file to .ssh folder: sudo mv private_key.pem ~/.ssh <br />
+	Change Directory (cd) : cd .ssh
+	Change permissions: sudo chmod 600 private_key.pem
+	Test if it is able to connect to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77
+
+	This will prompt a file like this ![alt text][ssh-connect-ubuntu].
+
+* 
 
 
+
+	
 
 
 
@@ -40,3 +53,4 @@ At the bottom on the left click on Account Page link to download the default pri
 [logo-connect-ssh]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/connect-ssh.png
 [ssh-key-pairs]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/ssh-key-pairs.png
 [custom-firewall]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/custom-firewall.png
+[ssh-connect-ubuntu]:
