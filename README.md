@@ -20,9 +20,7 @@ At the bottom on the left click on Account Page link to download the default pri
 
 * On the page, click on Download![alt text][ssh-key-pairs].
 
-* 
-
-
+* Click on Networking tab -> Firewall, and two custom ports ![alt text][custom-firewall]:
 
 
 
@@ -36,9 +34,9 @@ At the bottom on the left click on Account Page link to download the default pri
 
 
 
-
 [Amazon Lightsail]:https://aws.amazon.com/lightsail/
 [Amazon Console]:https://aws.amazon.com/console/
 [logo]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/aws-services.png
 [logo-connect-ssh]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/connect-ssh.png
 [ssh-key-pairs]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/ssh-key-pairs.png
+[custom-firewall]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/custom-firewall.png
