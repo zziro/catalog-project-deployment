@@ -190,13 +190,13 @@ pwykgc8ih1nx2VxOERGAhniKlpZ+sSqcpIkAJBPAH+W8LIF9m9Gj90k=
 
 ## Refferences
 
-1.- [Amazon Lightsail]
-2.- [Permission for .pem file]
-3.- [Configure host]
-4.- [WSGI mode to deploy flas app]
-5.- [Disable, Enable default website]
-6.- [Configure postgres]
-7.- [Vim commands]
+1.- [Amazon Lightsail] <br />
+2.- [Permission for .pem file] <br />
+3.- [Configure host] <br />
+4.- [WSGI mode to deploy flas app] <br />
+5.- [Disable, Enable default website] <br />
+6.- [Configure postgres] <br />
+7.- [Vim commands] <br />
 
 
 [Amazon Lightsail]:https://aws.amazon.com/lightsail/
