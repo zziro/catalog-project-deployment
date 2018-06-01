@@ -169,10 +169,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	  engine = create_engine('postgres://catalog:[PASSWORD]@localhost/catalog')
 	* Run database_setup.py: python database_setup.py
 	* Restarting the apache server: sudo service apache2 restart
-
-
-
-
+	* Type the Amazon public IP address in the browser: 54.152.38.77 and the web shoould be live.
 
 
 [Amazon Lightsail]:https://aws.amazon.com/lightsail/
