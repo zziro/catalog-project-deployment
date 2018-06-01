@@ -8,17 +8,20 @@ If you do not have an Amazon Lightsail account. Please create on at [Amazon Cons
 
 ## Launch Amazon Lightsail instance
 
-* Once you have you Amazon account, login on [Amazon Console] and click on Services and you will see a bunch of amazon's services. From there, Select Lightsail![alt text][logo].
+* Once you have you Amazon account, login on [Amazon Console] and click on Services and you will see a bunch of amazon's services. Change the origin and select N. Virginie. From there, Select Lightsail![alt text][logo].
 
 * This will prompt you to the next page![alt text][logo-connect-ssh].
 The page show important things. 
-	Connect using SHH.
-	Public IP: 54.152.38.77 
-	Username: ubuntu
+	Connect using SHH. <br />
+	Public IP: 54.152.38.77 <br />
+	Username: ubuntu <br />
 
 At the bottom on the left click on Account Page link to download the default private key.
 
 * On the page, click on Download![alt text][ssh-key-pairs].
+
+* 
+
 
 
 
