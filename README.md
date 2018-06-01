@@ -29,7 +29,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	Change permissions: sudo chmod 600 private_key.pem <br />
 	Test if it is able to connect to AWS Lightsail: sudo ssh -i ~/.ssh/private_key <br />ubuntu@54.152.38.77
 
-	This will prompt a file like this ![alt text][ssh-connect-ubuntu].<br />
+	This will prompt a file like this. ![alt text][ssh-connect-ubuntu]<br />
 
 * 
 
