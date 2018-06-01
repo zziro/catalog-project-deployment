@@ -1,7 +1,7 @@
 # catalog-project-deployment
 
 In this project we will be deploying the sport catalog project. 
-Project URL: 54.152.38.77
+Project URL: [54.152.38.77]
 
 ## Launch Amazon Lightsail instance
 
@@ -180,3 +180,4 @@ At the bottom on the left click on Account Page link to download the default pri
 [ssh-key-pairs]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/ssh-key-pairs.png
 [custom-firewall]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/custom-firewall.png
 [ssh-connect-ubuntu]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/test-connect-ubuntu.png
+[54.152.38.77]
