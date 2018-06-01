@@ -182,4 +182,4 @@ At the bottom on the left click on Account Page link to download the default pri
 [custom-firewall]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/custom-firewall.png
 [ssh-connect-ubuntu]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/test-connect-ubuntu.png
 [54.152.38.77]:http://54.152.38.77/
-[client-secret-config]:
+[client-secret-config]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/client-secret-config.png
