@@ -31,7 +31,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />
 
 * Creating new User
-	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will be allow to make changes in the server with user root).
+	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will allow to make changes in the server with user root).
 	* Create new User: sudo adduser grader
 	* Create new file: sudo vim /etc/sudoers.d/grader
 	* In the new file, write: grader ALL=(ALL:ALL) ALL (to save changes ESC and :wq!)
@@ -42,7 +42,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	* In another terminal: sudo ssh key-gen -f  ~/.ssh/private_key.rsa	
 	* Find the key generated: sudo cat ~/.ssh/private_key.rsa.pub
 	* Copy  the key generated.
-	* Go to another terminal, navigat to grader's folder: cd /home/grader
+	* Go to another terminal, navigate to grader's folder: cd /home/grader
 	* Create the .ssh directory: mkdir .ssh
 	* Create the authorized file: touch .ssh/authorized_keys (here will store the private key copied).
 	* Edit the authorized_file: sudo vim .ssh/authorized_key
@@ -53,10 +53,10 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Configuring Port, PasswordAuthentication and PermitRootLogin:
 		* sudo vim /etc/ssh/sshd_config
 		* Find PasswordAuthentication and as no : PasswordAuthentication no
-		* Find Port and chagne to 2200: Port 2200
+		* Find Port and change to 2200: Port 2200
 		* Find PermitRootLogin and set up as no: PermitRootLogin no
 	* Restart the ssh service: sudo service ssh restart
-	* Write 'exit' to go out 'logout'.
+	* Write 'exit' to go out and then 'logout' to disconnect.
 	* Testing the connectio as grader: ssh -i ~/.ssh]/private_key.rsa grader@54.152.38.77
 
 * Configure firewall
@@ -91,7 +91,7 @@ At the bottom on the left click on Account Page link to download the default pri
 
 * Clone the application
 	* Change directory to www file: cd /var/www
-	* Create a directory: mdir catalog
+	* Create a directory: mkdir catalog
 	* Change direcory to catalog folder: cd catalog
 	* Clone the catalog project: git clone https://github.com/zziro/fullstack-nanodegree-vm.git catalog
 
@@ -116,12 +116,12 @@ At the bottom on the left click on Account Page link to download the default pri
 
 	![alt text][config-virtualhost]
 
-	* Enable our website
-		sudo a2ensite catalog.conf
-		sudo service apache2 reload
-	* Disable the default website
-		sudo a2dissite 000-default.conf
-		sudo service apache2 reload
+	* Enable the website: <br />
+		sudo a2ensite catalog.conf <br />
+		sudo service apache2 reload <br />
+	* Disable the default website <br />
+		sudo a2dissite 000-default.conf <br />
+		sudo service apache2 reload 
 
 * Configuration in application.py
 
