@@ -1,12 +1,13 @@
 # catalog-project-deployment
 
 In this project we will be deploying the sport catalog project. 
+Project URL: 54.152.38.77
+
+## Launch Amazon Lightsail instance
 
 In order to make accesible the project we will be using amazon services. The project will be using [Amazon Lightsail].
 
 If you do not have an Amazon Lightsail account. Please create on at [Amazon Console].
-
-## Launch Amazon Lightsail instance
 
 * Once you have you Amazon account, login on [Amazon Console] and click on Services and you will see a bunch of amazon's services. Change the origin and select N. Virginie. From there, Select Lightsail![alt text][logo].
 
