@@ -23,13 +23,13 @@ At the bottom on the left click on Account Page link to download the default pri
 * Click on Networking tab -> Firewall, and two custom ports: 123 and 2200. ![alt text][custom-firewall]:
 
 * From terminal to the Downloads folfer:
-	* Rename file: sudo mv LightsailDefaultPrivateKey-us-east-1.pem private_key.pem <br />
-	* Move .pem file to .ssh folder: sudo mv private_key.pem ~/.ssh <br />
-	* Change Directory (cd) : cd .ssh <br />
-	* Change permissions: sudo chmod 600 private_key.pem <br />
-	* Test if it is able to connect to AWS Lightsail: sudo ssh -i ~/.ssh/private_key <br />ubuntu@54.152.38.77
+	* **Rename file:** sudo mv LightsailDefaultPrivateKey-us-east-1.pem private_key.pem <br />
+	* **Move .pem file to .ssh folder:** sudo mv private_key.pem ~/.ssh <br />
+	* **Change Directory (cd):** cd .ssh <br />
+	* **Change permissions:** sudo chmod 600 private_key.pem <br />
+	* **Test if it is able to connect to AWS Lightsail:** sudo ssh -i ~/.ssh/private_key <br />ubuntu@54.152.38.77
 
-	
+
 
 
 
