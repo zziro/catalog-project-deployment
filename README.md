@@ -23,12 +23,13 @@ At the bottom on the left click on Account Page link to download the default pri
 
 * Click on Networking tab -> Firewall, and two custom ports: 123 and 2200. ![alt text][custom-firewall]:
 
-* Connection to Amazon Lightsail:
+* Connection to Amazon Lightsail:	
 	* Rename file: sudo mv LightsailDefaultPrivateKey-us-east-1.pem private_key.pem <br />
 	* Move .pem file to .ssh folder: sudo mv private_key.pem ~/.ssh <br />
 	* Change Directory (cd): cd .ssh <br />
 	* Change permissions: sudo chmod 600 private_key.pem <br />
 	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />
+	Note: LightsailDefaultPrivateKey-us-east-1.pem's content is at the bottom of this file.
 
 * Creating new User
 	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will allow to make changes in the server with user root).
@@ -156,6 +157,48 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Type the Amazon public IP address in the browser: 54.152.38.77 and the web shoould be live.
 
 
+LightsailDefaultPrivateKey-us-east-1's content:
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAqBVHYO6t31auSx5M00EjwGIzG9Tep+Ds20XyDJNFa9Ln+hRe
+ofCDm8YAMl4nfnuGO7YSlYhaxCK3L1HBOE3hXnPZyqPmX51GfUWHEbN6w64FHWyf
+SmSbQ9Pa82QG8NWSLjtFWCZMICTFeRQCsi+4o8vCzISStUNGAmZJ1FqTEXBY63rl
+G+lBnRoYZ4tQh97pXowz5B0RKOygLIH9uRnrYk4PmRhSYFnFF6fVW9+fpnf9FTK3
+Mk5X4lvtiinpztaswQxlod28sZ0tBPriMPoZBM6sMTMjJ5jhR257KCsejcNHKILL
+r0/BweyZzaDi0rhmEcwmzn9Dz/PD8sb+JRYpTwIDAQABAoIBAGLb8RmQCG/9uZGx
+BpqSC4cRuuG5uCOhZW4qm4zN6dzbNVmfNXGl1qJ+OItnWW9JE9B27ENK6afGi1un
+iC+njtBQ714CPHMsO9NeW20L1T7WUWfXBXFp7vBb4MGaqYJo+wt6DPUlwUx+lC78
+mAFZlA2ywKYtq2Q1Zy3uH6pog2uTZeYEz01EJVXVdJx1xhdzWvrj+Tl5BxstIBjU
+pT4XvOGx8uOcj6ygjGAU+urHb4AfolqJ5Y8t8NtRGMZGMA0v9WmfXZZPqh/Y9ckY
+I6hUMR/ZUU0g+YFLBdawFDx7RmP3FFQktSSeI295dRfP1EP0vIiRis/8lJuNNZjQ
+qU+X4VECgYEA35wYS6ET+HmhuPewXY4ChrkknEvtREj0H7ItDbZwWTGnc6kEfnFN
+4OloH3oHJayD8Ia1gooYeCGt5DAPmLm10LDdfPfrkhZlHH6tS4PapgtOlgXS/TsM
+YrNKF01QinguckwSV8EJjqrxsqsnh/RUOjyO4+VCJOq2TE5UVpUPyJUCgYEAwG4k
+u4y9+GfYT8249GcF2fo49JP2Cu5Qi5iLmI0khhRyI1iM8gm+U4NemYZkFyexHRsZ
+dtn/cNUpiijllOwOyn4o79NQTIiup/Y5hslxXjMysXS/g8CNdOJWtmrQ/ujtkncj
+NGPimsPMDPFEsCH0U5fVD8nhzBpK/rO4rkgyXVMCgYEArKiu6dbawMXKZjR67gI1
+WSmkZzsJXeym88J0n137qiN5FQmw+qEqbTxMteFXm3N1/UdG6CERe9EloEisAlWD
+Wjz3CQO11fuM30/BJ8oMDqI0cArXO8lYau3di9ibFBBwbLjogPIBGzRLpJYb1BKI
+5t7TxozDYhYJ5SmmXaSDp3ECgYEAocF0mzs5zX/tc1fpK3kWkB8olV9zKckeZ9n5
+Lmkm1JaHQ3MCN8s89BKwCLnRlS1GUsMe6qthcEWfP4YVRtQPsuPOIZsuGseimYn+
+3XCkHZ1H9ae//U51GlXQslKkEENYwQ/oxfdY2uPPuOlu5egE6+frr/PyHJHVjLki
+e04xGAUCgYEAjTzSs0VMttbWd8ybcW5KPUVkBgToI1Luilsigv5QIQ9sQFr5vIS1
+v28k8NKAVF2kBBTwviEyJh+vBdATDEE6VpZDM8iOOlMB+gIka3hBqsBY0l9wb+Rl
+pwykgc8ih1nx2VxOERGAhniKlpZ+sSqcpIkAJBPAH+W8LIF9m9Gj90k=
+-----END RSA PRIVATE KEY-----
+
+
+## Refferences
+
+1.- [Amazon Lightsail]
+2.- [Permission for .pem file]
+3.- [Configure host]
+4.- [WSGI mode to deploy flas app]
+5.- [Disable, Enable default website]
+6.- [Configure postgres]
+7.- [Vim commands]
+
+
 [Amazon Lightsail]:https://aws.amazon.com/lightsail/
 [Amazon Console]:https://aws.amazon.com/console/
 [logo]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/aws-services.png
@@ -166,3 +209,9 @@ At the bottom on the left click on Account Page link to download the default pri
 [54.152.38.77]:http://54.152.38.77/
 [client-secret-config]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/client-secret-config.png
 [config-virtualhost]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/config-virtualhost.png
+[Disable, Enable default website]:https://www.codementor.io/curtisgervais/setup-and-configure-apache-virtual-hosts-79kt2nuy6
+[Permission for .pem file]:https://unix.stackexchange.com/questions/115838/what-is-the-right-file-permission-for-a-pem-file-to-ssh-and-scp/115981#115981
+[Vim commands]:https://www.computerhope.com/unix/vim.htm
+[Configure host]:https://askubuntu.com/questions/59458/error-message-sudo-unable-to-resolve-host-user
+[WSGI mode to deploy flas app]:http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/
+[Configure postgres]:http://suite.opengeo.org/docs/latest/dataadmin/pgGettingStarted/firstconnect.html
