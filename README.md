@@ -18,6 +18,8 @@ The page show important things.
 
 At the bottom on the left click on Account Page to download the default private key. 
 
+Once on
+
 
 
 ## Deployment
@@ -30,4 +32,4 @@ At the bottom on the left click on Account Page to download the default private 
 [Amazon Lightsail]:https://aws.amazon.com/lightsail/
 [Amazon Console]:https://aws.amazon.com/console/
 [logo]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/aws-services.png
-[logo-connect.ssh]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/connect-ssh.png
+[logo-connect-ssh]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/connect-ssh.png
