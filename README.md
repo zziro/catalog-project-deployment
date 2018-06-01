@@ -147,11 +147,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Open the application.py file: sudo vim application.py
 	* Update the CLIENT_ID and CLIENT_SECRET lines to: 
 
-		CLIENT_ID = json.loads(
-    	open('/var/www/catalog/catalog/vagrant/catalog/client_secrets.json', 'r').read())['web']['client_id']
-
-		CLIENT_SECRET = json.loads(
-    	open('/var/www/catalog/catalog/vagrant/catalog/client_secrets.json', 'r').read())['web']['client_secret']
+		![alt text][client-secret-config]
     
     * Configure the engine connection:
     engine = create_engine('postgres://catalog:[PASSWORD]@localhost/catalog')
@@ -186,3 +182,4 @@ At the bottom on the left click on Account Page link to download the default pri
 [custom-firewall]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/custom-firewall.png
 [ssh-connect-ubuntu]:https://github.com/zziro/catalog-project-deployment/blob/master/screenshots/test-connect-ubuntu.png
 [54.152.38.77]:http://54.152.38.77/
+[client-secret-config]:
