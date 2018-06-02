@@ -38,7 +38,7 @@ At the bottom on the left click on Account Page link to download the default pri
 		sudo apt list --upgradable
 
 	* If there are, run the following command: <br />
-		sudo apt-get install --only-upgrade <packageName> <br />
+		sudo apt-get install --only-upgrade package_name <br />
 	Example: sudo apt-get install --only-upgrade snapd
 
 * Creating new User
