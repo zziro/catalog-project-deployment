@@ -28,8 +28,7 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Move .pem file to .ssh folder: sudo mv private_key.pem ~/.ssh <br />
 	* Change Directory (cd): cd .ssh <br />
 	* Change permissions: sudo chmod 600 private_key.pem <br />
-	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />
-	Note: LightsailDefaultPrivateKey-us-east-1.pem's content is at the bottom of this file.
+	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />	
 
 * Creating new User
 	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will allow to make changes in the server with user root).
@@ -58,7 +57,7 @@ At the bottom on the left click on Account Page link to download the default pri
 		* Find PermitRootLogin and set up as no: PermitRootLogin no
 	* Restart the ssh service: sudo service ssh restart
 	* Write 'exit' to go out and then 'logout' to disconnect.
-	* Testing the connectio as grader: ssh -i ~/.ssh]/private_key.rsa grader@54.152.38.77
+	* Testing the connectio as grader: sudo ssh -i ~/.ssh/private_key.rsa grader@54.152.38.77
 
 * Configure firewall
  	* sudo ufw allow 2200/tcp
@@ -155,38 +154,6 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Run database_setup.py: python database_setup.py
 	* Restarting the apache server: sudo service apache2 restart
 	* Type the Amazon public IP address in the browser: 54.152.38.77 and the web shoould be live.
-
-
-LightsailDefaultPrivateKey-us-east-1's content:
-
------BEGIN RSA PRIVATE KEY-----
-MIIEpQIBAAKCAQEAqBVHYO6t31auSx5M00EjwGIzG9Tep+Ds20XyDJNFa9Ln+hRe
-ofCDm8YAMl4nfnuGO7YSlYhaxCK3L1HBOE3hXnPZyqPmX51GfUWHEbN6w64FHWyf
-SmSbQ9Pa82QG8NWSLjtFWCZMICTFeRQCsi+4o8vCzISStUNGAmZJ1FqTEXBY63rl
-G+lBnRoYZ4tQh97pXowz5B0RKOygLIH9uRnrYk4PmRhSYFnFF6fVW9+fpnf9FTK3
-Mk5X4lvtiinpztaswQxlod28sZ0tBPriMPoZBM6sMTMjJ5jhR257KCsejcNHKILL
-r0/BweyZzaDi0rhmEcwmzn9Dz/PD8sb+JRYpTwIDAQABAoIBAGLb8RmQCG/9uZGx
-BpqSC4cRuuG5uCOhZW4qm4zN6dzbNVmfNXGl1qJ+OItnWW9JE9B27ENK6afGi1un
-iC+njtBQ714CPHMsO9NeW20L1T7WUWfXBXFp7vBb4MGaqYJo+wt6DPUlwUx+lC78
-mAFZlA2ywKYtq2Q1Zy3uH6pog2uTZeYEz01EJVXVdJx1xhdzWvrj+Tl5BxstIBjU
-pT4XvOGx8uOcj6ygjGAU+urHb4AfolqJ5Y8t8NtRGMZGMA0v9WmfXZZPqh/Y9ckY
-I6hUMR/ZUU0g+YFLBdawFDx7RmP3FFQktSSeI295dRfP1EP0vIiRis/8lJuNNZjQ
-qU+X4VECgYEA35wYS6ET+HmhuPewXY4ChrkknEvtREj0H7ItDbZwWTGnc6kEfnFN
-4OloH3oHJayD8Ia1gooYeCGt5DAPmLm10LDdfPfrkhZlHH6tS4PapgtOlgXS/TsM
-YrNKF01QinguckwSV8EJjqrxsqsnh/RUOjyO4+VCJOq2TE5UVpUPyJUCgYEAwG4k
-u4y9+GfYT8249GcF2fo49JP2Cu5Qi5iLmI0khhRyI1iM8gm+U4NemYZkFyexHRsZ
-dtn/cNUpiijllOwOyn4o79NQTIiup/Y5hslxXjMysXS/g8CNdOJWtmrQ/ujtkncj
-NGPimsPMDPFEsCH0U5fVD8nhzBpK/rO4rkgyXVMCgYEArKiu6dbawMXKZjR67gI1
-WSmkZzsJXeym88J0n137qiN5FQmw+qEqbTxMteFXm3N1/UdG6CERe9EloEisAlWD
-Wjz3CQO11fuM30/BJ8oMDqI0cArXO8lYau3di9ibFBBwbLjogPIBGzRLpJYb1BKI
-5t7TxozDYhYJ5SmmXaSDp3ECgYEAocF0mzs5zX/tc1fpK3kWkB8olV9zKckeZ9n5
-Lmkm1JaHQ3MCN8s89BKwCLnRlS1GUsMe6qthcEWfP4YVRtQPsuPOIZsuGseimYn+
-3XCkHZ1H9ae//U51GlXQslKkEENYwQ/oxfdY2uPPuOlu5egE6+frr/PyHJHVjLki
-e04xGAUCgYEAjTzSs0VMttbWd8ybcW5KPUVkBgToI1Luilsigv5QIQ9sQFr5vIS1
-v28k8NKAVF2kBBTwviEyJh+vBdATDEE6VpZDM8iOOlMB+gIka3hBqsBY0l9wb+Rl
-pwykgc8ih1nx2VxOERGAhniKlpZ+sSqcpIkAJBPAH+W8LIF9m9Gj90k=
------END RSA PRIVATE KEY-----
-
 
 ## Refferences
 
