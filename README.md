@@ -34,11 +34,11 @@ At the bottom on the left click on Account Page link to download the default pri
 	* sudo apt-get update
 	* sudo apt-get upgrade
 
-	* Check if there are still tools or packages to update, run the following command:
+	* Check if there are still tools or packages to update, run the following command: <br />
 		sudo apt list --upgradable
 
-	* If there are, run the following command.
-		sudo apt-get install --only-upgrade <packageName>
+	* If there are, run the following command: <br />
+		sudo apt-get install --only-upgrade <packageName> <br />
 	Example: sudo apt-get install --only-upgrade snapd
 
 * Creating new User
