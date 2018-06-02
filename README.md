@@ -28,7 +28,11 @@ At the bottom on the left click on Account Page link to download the default pri
 	* Move .pem file to .ssh folder: sudo mv private_key.pem ~/.ssh <br />
 	* Change Directory (cd): cd .ssh <br />
 	* Change permissions: sudo chmod 600 private_key.pem <br />
-	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />	
+	* Test connection to AWS Lightsail: sudo ssh -i ~/.ssh/private_key ubuntu@54.152.38.77 <br />
+
+* Update and install latest packages and dependencies
+	* sudo apt-get update
+	* sudo apt-get upgrade
 
 * Creating new User
 	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will allow to make changes in the server with user root).
