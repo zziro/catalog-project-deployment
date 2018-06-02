@@ -34,6 +34,13 @@ At the bottom on the left click on Account Page link to download the default pri
 	* sudo apt-get update
 	* sudo apt-get upgrade
 
+	* Check if there are still tools or packages to update, run the following command:
+		sudo apt list --upgradable
+
+	* If there are, run the following command.
+		sudo apt-get install --only-upgrade <packageName>
+	Example: sudo apt-get install --only-upgrade snapd
+
 * Creating new User
 	* Once logged in in Amazon Lightsail, change the user to super user: sudo su (this will allow to make changes in the server with user root).
 	* Create new User: sudo adduser grader
@@ -61,7 +68,8 @@ At the bottom on the left click on Account Page link to download the default pri
 		* Find PermitRootLogin and set up as no: PermitRootLogin no
 	* Restart the ssh service: sudo service ssh restart
 	* Write 'exit' to go out and then 'logout' to disconnect.
-	* Testing the connectio as grader: sudo ssh -i ~/.ssh/private_key.rsa grader@54.152.38.77
+	* Testing the connection as grader: sudo ssh -i ~/.ssh/private_key.rsa grader@54.152.38.77
+	Note: Use passphrase :system123
 
 * Configure firewall
  	* sudo ufw allow 2200/tcp
